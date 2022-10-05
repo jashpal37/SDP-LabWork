@@ -26,6 +26,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
     WordTime(location: 'Paris', flag: 'france.png', url: 'Europe/Paris'),
     WordTime(location: 'Jamaica',flag: 'jamaica.png',url: 'America/Jamaica'),
 WordTime(location: 'Phoenix',flag: 'usa.png',url: 'America/Phoenix'),
+WordTime(location: 'Toronto',flag: 'canada.png',url: 'America/Toronto')
   ];
   void updateTime(index) async {
     WordTime instance = locations[index];
@@ -60,7 +61,7 @@ WordTime(location: 'Phoenix',flag: 'usa.png',url: 'America/Phoenix'),
                     updateTime(index);
                     print(locations[index].location);
                   },
-                  title: Text(locations[index].toString()),
+                  title: Text(locations[index].location.toString()),
                   leading: CircleAvatar(
                     backgroundImage: AssetImage('assets/flags/${locations[index].flag}'),
                   ),
